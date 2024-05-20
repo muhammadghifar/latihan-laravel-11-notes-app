@@ -22,7 +22,8 @@
                     <p>
                         {{ Str::limit($note->text, 150) }}
                     </p>
-                    <span class="text-sm text-gray-400">{{ $note->updated_at->diffForHumans() }}</span>
+                    <p class="text-sm text-gray-400">{{ $note->updated_at->diffForHumans() }}</p>
+                    <a href="{{ route('notes.show', $note->id) }}" class="mt-4 text-blue-400 cursor-pointer hover:underline">Lihat Detail</a>
                 </div>
 
             @empty
