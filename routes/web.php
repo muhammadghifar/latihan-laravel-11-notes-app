@@ -18,6 +18,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('/notes', NoteController::class)->middleware(['auth'])->name('index', 'notes');
+Route::resource('/notes', NoteController::class)->middleware(['auth']);
 
 require __DIR__ . '/auth.php';
